@@ -10,8 +10,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bhadoo Cloud - Upload to Google Drive</title>
-    <meta name="description" content="Upload Files using URL to Google Drive the easy way.">
+    <title>小W云 - 上传到谷歌云端硬盘</title>
+    <meta name="description" content="使用远程地址上传文件到谷歌云端硬盘的简单方法.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="ReTB1LPGTaMBFG8EIW7EoAIXcr3QKu-RibNeVm7WkeM" />
     <meta name="robots" content="all,follow">
@@ -79,11 +79,11 @@
                     <c:choose>
 	                    <c:when test='${empty(user)}'>
                         <li class="nav-item">
-			<img class="g-login" src="https://cdn.jsdelivr.net/gh/jscdn/images@1.0.3/logo/google/signin/btn_google_signin_light_normal_web.png" title="Sign in with Google" onclick="location.href = '/api/oauth/google/redirect'">
+			<img class="g-login" src="https://cdn.jsdelivr.net/gh/jscdn/images@1.0.3/logo/google/signin/btn_google_signin_light_normal_web.png" title="登陆谷歌账号" onclick="location.href = '/api/oauth/google/redirect'">
 			</li>
                         </c:when>
                         <c:otherwise>	
-                        <li class="nav-item"><a href="/api/oauth/google/redirect">Switch User</a></li>
+                        <li class="nav-item"><a href="/api/oauth/google/redirect">切换用户</a></li>
                         </c:otherwise>
 	                </c:choose>
                     </ul>
@@ -101,8 +101,8 @@
                         <div class="avatar"><img src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Bhadoo-Cloud-Drive/src/main/resources/static/img/guest.png" alt="Guest"
                                                  class="img-fluid rounded-circle"></div>
                         <div class="title">
-                            <p>Welcome</p>
-                            <h1 class="h4">Guest</h1>
+                            <p>欢迎</p>
+                            <h1 class="h4">游客</h1>
                         </div>
                     </c:when>
                     <c:otherwise>
@@ -110,20 +110,19 @@
                                                  alt="Avatar of <c:out value='${user.name}' />"
                                                  class="img-fluid rounded-circle"></div>
                         <div class="title">
-                            <p>Welcome</p>
+                            <p>欢迎</p>
                             <h1 class="h4"><c:out value='${user.name}'/></h1>
                         </div>
                     </c:otherwise>
                 </c:choose>
             </div>
-            <!-- Sidebar Navidation Menus --><span class="heading">Main</span>
+            <!-- Sidebar Navidation Menus --><span class="heading">菜单</span>
             <ul class="list-unstyled">
-                <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="/new_upload"><i class="fa fa-cloud-upload"></i>New Upload</a></li>
-                <li><a href="/uploads"> <i class="fa fa-tachometer"></i>Your Uploads</a></li>
+                <li><a href="/"><i class="fa fa-home"></i>主页</a></li>
+                <li><a href="/new_upload"><i class="fa fa-cloud-upload"></i>上传</a></li>
+                <li><a href="/uploads"> <i class="fa fa-tachometer"></i>上传中/已上传</a></li>
                 <!-- <li><a href="https://github.com/ParveenBhadooOfficial/SaveToGoogleDrive/issues"> <i class="fa fa-thumbs-o-up"></i>Suggest an Idea</a></li> -->
                 <!-- <li><a href="https://github.com/ParveenBhadooOfficial/SaveToGoogleDrive/issues"> <i class="fa fa-bug"></i>Report a Bug</a></li> -->
-                <li><a href="https://hashhackers.com/contact"> <i class="fa fa-envelope-o "></i>Contact</a></li>
             </ul>
         </nav>
         <div class="content-inner" id="content-inner">
